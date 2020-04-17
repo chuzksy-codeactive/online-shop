@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const shopRoute = require('./routes/shop');
-const adminData = require('./routes/admin');
+const adminRoute = require('./routes/admin');
+const errorController = require('./controllers/error');
 
 const app = express();
 
@@ -14,12 +15,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoute );
 app.use(shopRoute); 
 
-app.use((req, res, next) => {
-  res.status(404).render('404', { pageTitle: '404: Not Found'});
-});
+app.use(errorController.get404 );
 
 app.listen(3000, () => {
   console.log('App is listening on port 3000');
