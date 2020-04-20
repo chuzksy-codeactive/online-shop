@@ -1,3 +1,9 @@
 .main-card {
     margin-top: 20px;
 }
+
+.img-url {
+    width: 275px;
+    height: 155px;
+    filter: brightness(40%);
+}

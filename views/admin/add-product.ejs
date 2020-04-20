@@ -10,9 +10,23 @@
         <div class="row">
             <div class="col s6 offset-s3">
                 <form action="/admin/add-product" method="POST">
-                    <div class="form-control">
-                        <label for="title">Title</label>
-                        <input type="text" name="title" id="title">
+                    <div class="row">
+                        <div class="col s12">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" id="title">
+                        </div>
+                        <div class="col s12">
+                            <label for="imageUrl">Image Url</label>
+                            <input type="text" name="imageUrl" id="imageUrl">
+                        </div>
+                        <div class="col s12">
+                            <label for="price">Price</label>
+                            <input type="number" name="price" id="price" step="0.01">
+                        </div>
+                        <div class="col s12">
+                            <label for="description">Description</label>
+                            <textarea class="materialize-textarea" name="description" id="description"></textarea>
+                        </div>
                     </div>
 
                     <button class="btn" type="submit">Add Product</button>
