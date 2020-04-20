@@ -12,10 +12,7 @@
       <div class="col s4">
         <div class="card">
           <div class="card-image">
-            <img
-              class="img-url"
-              src="<%= product.imageUrl %>"
-              alt="<%= product.title %>">
+            <img class="img-url" src="<%= product.imageUrl %>" alt="<%= product.title %>">
             <span class="card-title"><%= product.title %></span>
           </div>
           <div class="card-content">
@@ -23,7 +20,9 @@
             <p class="truncate"><%= product.description %></p>
           </div>
           <div class="card-action">
-            <a href="#">Add to Cart</a>
+            <form action="/add-to-cart" method="POST">
+              <button class="btn">Add to Cart</button>
+            </form>
           </div>
         </div>
       </div>

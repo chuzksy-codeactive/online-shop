@@ -4,3 +4,33 @@
 
 <body>
   <%- include('../includes/navigation.ejs') %>
+
+  <main class="container main-card">
+    <% if (prods.length > 0) { %>
+    <div class="row">
+      <% for (let product of prods) { %>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img class="img-url" src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            <span class="card-title"><%= product.title %></span>
+          </div>
+          <div class="card-content">
+            <h3 class="truncate">$<%= product.price %></h3>
+            <p class="truncate"><%= product.description %></p>
+          </div>
+          <div class="card-action">
+            <a href="/admin/edit-product"><i class="material-icons blue-text">edit</i></a>
+            <form class="edit-form" action="/admin/delete-product" method="POST">
+              <button class="edit-btn" type="submit"><i class="material-icons red-text">delete</i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <% } else { %>
+    <h3>No Products Found!</h3>
+    <% } %>
+  </main>
+  <%- include('../includes/end.ejs') %>
