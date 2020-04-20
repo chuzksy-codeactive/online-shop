@@ -3,7 +3,10 @@
     <a href="#" class="brand-logo">eShop</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li class="<%= path === '/' ? 'active' : '' %>"><a href="/">Shop</a></li>
+      <li class="<%= path === '/products' ? 'active' : '' %>"><a href="/products">Products</a></li>
+      <li class="<%= path === '/cart' ? 'active' : '' %>"><a href="/cart">Cart</a></li>
       <li class="<%= path === '/admin/add-product' ? 'active' : '' %>"><a href="/admin/add-product">Add Product</a></li>
+      <li class="<%= path === '/admin/products' ? 'active' : '' %>"><a href="/admin/products">Admin Products</a></li>
     </ul>
   </div>
 </nav>
