@@ -23,7 +23,7 @@
             <p class="truncate"><%= product.description %></p>
           </div>
           <div class="card-action">
-            <a href="#">Add to Cart</a>
+            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
           </div>
         </div>
       </div>

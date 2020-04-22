@@ -17,3 +17,7 @@
     background-color: transparent;
     padding: 0;
 }
+
+.detail-form {
+    display: inline;
+}

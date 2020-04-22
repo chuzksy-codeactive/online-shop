@@ -20,9 +20,8 @@
             <p class="truncate"><%= product.description %></p>
           </div>
           <div class="card-action">
-            <form action="/add-to-cart" method="POST">
-              <button class="btn">Add to Cart</button>
-            </form>
+            <a href="/products/<%= product.id %>">Details</a>
+            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
           </div>
         </div>
       </div>
