@@ -20,7 +20,7 @@
             <p class="truncate"><%= product.description %></p>
           </div>
           <div class="card-action">
-            <a href="/admin/edit-product"><i class="material-icons blue-text">edit</i></a>
+            <a href="/admin/edit-product/<%= product.id %>?edit=true"><i class="material-icons blue-text">edit</i></a>
             <form class="edit-form" action="/admin/delete-product" method="POST">
               <button class="edit-btn" type="submit"><i class="material-icons red-text">delete</i></button>
             </form>
